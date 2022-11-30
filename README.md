@@ -8,6 +8,8 @@ Lightning: Lights up random buttons for the player to press before time runs out
 
 Memory: Shows a pattern of LEDs and the player needs to repeat the pattern. Each new level adds a new button.
 
-
+![](https://github.com/klaw333/ButtonBoardGames/blob/main/memory_game.gif)
 
 Loop: Cycles the LEDs on the outer ring and the player has to press the red button when it's lit up. Each level gets progressively faster. 
+
+![](https://github.com/klaw333/ButtonBoardGames/blob/main/loop_game.gif)
