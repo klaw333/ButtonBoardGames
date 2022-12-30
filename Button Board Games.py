@@ -280,46 +280,16 @@ def blink_missed_button(button_number):
 #cycles LEDs from left to right
 def wipe_animation():
     speed = .10
+    leds = [(27), (21, 10), (4), (2, 11), (3), (0, 9), (5), (17, 6)]
     turn_off_all_leds()
-    turn_led_on(27)
-    time.sleep(speed)
-    turn_led_off(27)
-    time.sleep(speed)
-    turn_led_on(21)
-    turn_led_on(10)
-    time.sleep(speed)
-    turn_led_off(21)
-    turn_led_off(10)
-    time.sleep(speed)
-    turn_led_on(4)
-    time.sleep(speed)
-    turn_led_off(4)
-    time.sleep(speed)
-    turn_led_on(2)
-    turn_led_on(11)
-    time.sleep(speed)
-    turn_led_off(2)
-    turn_led_off(11)
-    time.sleep(speed)
-    turn_led_on(3)
-    time.sleep(speed)
-    turn_led_off(3)
-    time.sleep(speed)
-    turn_led_on(0)
-    turn_led_on(9)
-    time.sleep(speed)
-    turn_led_off(0)
-    turn_led_off(9)
-    time.sleep(speed)
-    turn_led_on(5)
-    time.sleep(speed)
-    turn_led_off(5)
-    time.sleep(speed)
-    turn_led_on(17)
-    turn_led_on(6)
-    time.sleep(speed)
-    turn_led_off(17)
-    turn_led_off(6)
+
+    for led_group in leds:
+        for led in led_group:
+            turn_led_on(led)
+        time.sleep(speed)
+        for led in led_group:
+            turn_led_off(led)
+        time.sleep(speed)
 
 #turns on all LEDs and turns them off when the player presses the button so lights and buttons can be tested
 def diagnostics():
